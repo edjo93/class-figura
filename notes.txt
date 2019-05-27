@@ -1,0 +1,7 @@
+continuamos con el ejercicio propuesto sobre una clase figuras de la cual heredan las clases Circulo, Rectangulo etc.
+
+rectangulo hereda de cuadrilatero /y llamamos al constructor de cuadrilatero 
+
+protected? cuando hay herencia se puede acceder a las variables privadas de la clase padre
+
+
