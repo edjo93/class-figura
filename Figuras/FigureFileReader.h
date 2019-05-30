@@ -9,7 +9,7 @@ using std::ifstream;
 
 #ifndef FIGUREFILEREADER_H
 #define FIGUREFILEREADER_H
-    class{
+    class FigureFileReader{
         private:
             ifstream file;
         public:

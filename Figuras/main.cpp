@@ -1,6 +1,7 @@
 #include "Figura.h"
 #include "Circulo.h"
 #include"Rectangulo.h"
+#include"FigureFileReader.h"
 
 #include  <iostream>
 using std::cout;
@@ -62,8 +63,31 @@ int main(){
 
     //27-05-2019
     //probar Rectangulo
-    Rectangulo*r=new Rectangulo(5,10);//buena practica crear un objeto para que el compilador no lo ignore
-    delete r;
+    //    Rectangulo*r=new Rectangulo(5,10);//buena practica crear un objeto para que el compilador no lo ignore
+    //  delete r;
+    //30-5-2019
+    //instanciar vector de figuras
+    vector<Figura*> figuras;
+    //instanciar clase reader
+    FigureFileReader* figureReader=new FigureFileReader();
+
+    figureReader->readCircles("circulos.txt",figuras);
+    //TODO: leer cuadrados y rectangulos
+
+    double totalArea=0;
+
+    for(int i=0;i<figuras.size();i++)
+        totalArea+=figuras[i]->getArea();
+    
+    cout<<"el area total es: "<<totalArea<<endl;
+
+    //liberar memoria
+    delete figureReader;
+
+    for(int i=0;i<figuras.size();i++)
+        delete figuras[i];
+    
+    figuras.clear();
 
     return 0;
 }

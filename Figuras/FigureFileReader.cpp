@@ -12,6 +12,7 @@ void FigureFileReader::readCircles(char*fileName,vector<Figura*>& figuras){
         }
     }
     //cerrar el archivo
-    file.close;
+    file.close();
 
 }
+
